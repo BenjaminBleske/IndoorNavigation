@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Leaflet Karte mit WMS und GeoJSON Features</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <!-- Eigene Styles -->
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <!-- Kartencontainer -->
+  <div id="map"></div>
+
+  <!-- Feature-Liste -->
+  <div class="feature-list">
+    <h2>Räume</h2>
+    <input type="text" id="search-box" class="search-box" placeholder="Suche Räume..." />
+    <ul id="feature-list"></ul>
+  </div>
+
+  <!-- Toggle-Button für mobile Geräte -->
+  <button id="toggle-feature-list">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+      <path d="M2 12.5A.5.5 0 0 1 2.5 12h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zM2 8.5A.5.5 0 0 1 2.5 8h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zM2 4.5A.5.5 0 0 1 2.5 4h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+    </svg>
+    Räume anzeigen
+  </button>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <!-- Eigene JS-Datei -->
+  <script src="scripts/index.js"></script>
+</body>
+</html>
